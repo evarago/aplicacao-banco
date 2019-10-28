@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AplicacaoBancoExtrato.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:AplicacaoBancoExtrato.WebApi.UseCases.Cadastro.ClienteController.Post(AplicacaoBancoExtrato.WebApi.UseCases.Cadastro.CadastroRequest)">
+            <summary>
+            Cadastro de novo cliente
+            </summary>
+        </member>
+        <member name="M:AplicacaoBancoExtrato.WebApi.UseCases.Deposito.ContaController.Deposito(AplicacaoBancoExtrato.WebApi.UseCases.Deposito.DepositoRequest)">
+            <summary>
+            Deposito na conta
+            </summary>
+        </member>
+        <member name="M:AplicacaoBancoExtrato.WebApi.UseCases.EncerrarConta.ContaController.Close(System.Guid)">
+            <summary>
+            Encerrar a conta
+            </summary>
+        </member>
+        <member name="M:AplicacaoBancoExtrato.WebApi.UseCases.GetClienteDetalhes.ClienteController.GetCliente(System.Guid)">
+            <summary>
+            Obter dados do cliente
+            </summary>
+        </member>
+        <member name="M:AplicacaoBancoExtrato.WebApi.UseCases.GetContaDetalhes.ContaController.Get(System.Guid)">
+            <summary>
+            Obter dados da conta
+            </summary>
+        </member>
+        <member name="M:AplicacaoBancoExtrato.WebApi.UseCases.Saque.ContaController.Saque(AplicacaoBancoExtrato.WebApi.UseCases.Saque.SaqueRequest)">
+            <summary>
+            Saque da conta
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,18 @@
+﻿{
+  "defaultAssembly": "AplicacaoBancoExtrato.Infrastructure",
+  "modules": [
+    {
+      "type": "AplicacaoBancoExtrato.WebApi.WebApiModule,AplicacaoBancoExtrato.WebApi",
+      "properties": {
+      }
+    },
+    {
+      "type": "AplicacaoBancoExtrato.Infrastructure.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "AplicacaoBancoExtrato.Infrastructure.InMemoryDataAccess.InMemoryModule"
+    }
+  ]
+}

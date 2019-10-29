@@ -1,4 +1,4 @@
-# [![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/evertonvarago/clean-architecture-webapi-ef-core/master/src/docker-compose.yml&stack_name=clean-architecture-webapi-ef-core) Clean Architecture Implementation of a Personal Wallet Web Api
+Clean Architecture - Web Api
 
 The simplest demo on how to implement a Web Api using .NET Core and Entity Framework that protects the business rules from framework dependencies by following the Clean Architecture Principles.
 
@@ -68,7 +68,3 @@ Developed and Tested using:
 * [.NET SDK 2.2](https://www.microsoft.com/net/download/dotnet-core/2.2).
 * Docker :whale:
 * SQL Server via Docker container.
-
-## :telephone: For Support and Issues
-
-I am happy to be reach out through the **Issues Tab**.

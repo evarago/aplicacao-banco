@@ -1,54 +1,14 @@
 Clean Architecture - Web Api
 
-The simplest demo on how to implement a Web Api using .NET Core and Entity Framework that protects the business rules from framework dependencies by following the Clean Architecture Principles.
+Aplicação simples utilizando princípios de Clean Architecture.
 
-## :whale: Running From The Docker Image
+## Executando a partir de uma imagem Docker
 
 ```sh
 docker run -e ASPNETCORE_ENVIRONMENT="Development" -p 5500:80 evertonvarago/clean-architecture-webapi-ef-core
 ```
 
-## :rocket: Running From Source
-
-To run on top of a InMemory persistance layer simple run:
-
-```sh
-dotnet run --environment="dev" --project src/AplicacaoBancoExtrato.WebApi/AplicacaoBancoExtrato.WebApi.csproj
-```
-
-To run on top of a SQL Server persistance layer you need to setup the SQL Server database in steps ahead then run:
-
-```sh
-dotnet run --environment="production" --project src/AplicacaoBancoExtrato.WebApi/AplicacaoBancoExtrato.WebApi.csproj
-```
-
-Then navigate to the Swagger URL `http://localhost:5500/` or run in command-line:
-
-```sh
-curl -X POST "http://localhost:5500/api/Customers" -H "accept: application/json" -H "Content-Type: application/json-patch+json" -d "{ \"personnummer\": \"198608178877\", \"name\": \"string\", \"initialAmount\": 440}"
-```
-
-## :floppy_disk: SQL Server Database
-
-If you wanna use Entity Framework, setup the SQL Server then update the database via dotnet EF Tool.
-
-### Update the Database
-
-```sh
-dotnet ef database update --project src/AplicacaoBancoExtrato.Infrastructure --startup-project src/AplicacaoBancoExtrato.WebApi
-```
-
-### Add Migration
-
-Run the EF Tool to add a migration to the `AplicacaoBancoExtrato.Infrastructure` project.
-
-```sh
-dotnet ef migrations add "InitialCreate" -o "EntityFrameworkDataAccess/Migrations" --project src/AplicacaoBancoExtrato.Infrastructure --startup-project src/AplicacaoBancoExtrato.WebApi
-```
-
-### Setup the SQL Server in Docker
-
-To run SQL Server container images with Docker use:
+### Configurar o SQL Server no Docker
 
 ```sh
 #!/bin/bash
@@ -57,11 +17,9 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 143
 sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourStrong!Passw0rd>' -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
 ```
 
-It will enable a SQL Server running on `Server=localhost;User Id=sa;Password=<YourNewStrong!Passw0rd>;` for more details checkout the docs at [How to run a SQL Server in a Docker Container](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017).
+## Requisitos
 
-## :checkered_flag: Requirements
-
-Developed and Tested using:
+Desenvolvido e testado usando:
 
 * MacOS Sierra
 * VSCode :heart:

@@ -1,4 +1,4 @@
-Clean Architecture - Web Api
+## Clean Architecture - Web Api
 
 Aplicação simples utilizando princípios de Clean Architecture.
 
@@ -8,7 +8,7 @@ Aplicação simples utilizando princípios de Clean Architecture.
 docker run -e ASPNETCORE_ENVIRONMENT="Development" -p 5500:80 evertonvarago/clean-architecture-webapi-ef-core
 ```
 
-### Configurar o SQL Server no Docker
+## Configurar o SQL Server no Docker
 
 ```sh
 #!/bin/bash
